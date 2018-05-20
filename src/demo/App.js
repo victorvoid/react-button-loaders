@@ -1,32 +1,31 @@
 import React, { Component } from 'react'
 import Button from '../lib'
 
-
 class App extends Component {
     state = {
-        loading: false,
-        finished: false
+        btnSend: ''
+    }
+
+    doAsyncMethod = () => {
+        setTimeout(() => {
+            this.setState({
+                btnSend: 'finished'
+            }, () => console.log('finished'))
+        }, 3000)
     }
 
     handleClick = () =>
-        this.setState(
-            ({ loading }) => ({loading: true})
-        )
-
-    handleFinished = () =>
-        this.setState(
-            ({ finished, loading }) => ({loading: false, finished: true})
+        this.setState({ btnSend: 'loading'},
+            () => this.doAsyncMethod()
         )
 
     render(){
-        const { loading, finished } = this.state
+        const { btnSend } = this.state
         return (
             <div>
                 <Button
-                    loading={loading}
-                    finished={finished}
-                    onClick={this.handleClick}
-                    onFinished={this.handleFinished}>hello</Button>
+                    state={btnSend}
+                    onClick={this.handleClick}>hello</Button>
             </div>
         )
     }
