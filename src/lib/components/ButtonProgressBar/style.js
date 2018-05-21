@@ -15,16 +15,21 @@ const progressBar = keyframes`
 `
 
 const scaleFinished = keyframes`
-	0%   { transform: scale(10) }
+	0%   {
+    transform: scale(10);
+    opacity: 0
+  }
 	50%  { transform: scale(0.2) }
 	70%  { transform: scale(1.2) }
 	90%  { transform: scale(0.7) }
-	100% { transform: scale(1) }
+	100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 `
 
 export const Text = styled.span`
   font-size: 15px;
-  font-weight: 300;
 `
 Text.displayName = 'Text'
 
@@ -70,14 +75,17 @@ export const ButtonStyled = styled.button`
   cursor: pointer;
   width: 200px;
   padding: 24px 50px;
-  background-color: #03a9f4;
+  background-color: #fd5c63;
   color: #fff;
   border: none;
   border-radius: 4px;
-  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   overflow: hidden;
   outline: none;
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0 12px 24px 0 rgba(233, 92, 97, 0.2);
+  }
   &:before {
     position: absolute;
     content: '';
@@ -86,7 +94,7 @@ export const ButtonStyled = styled.button`
     transform: translateX(-100%);
     width: 100%;
     height: 100%;
-    background-color: #54d98c;
+    background-color: #3594ca;
   }
   ${Text}, ${Loading}, ${Success} {
     position: absolute;
@@ -107,7 +115,7 @@ export const ButtonStyled = styled.button`
   &.${prefixCls}__loading {
     cursor: progress;
     pointer-events: none;
-    background-color: #2ecc71;
+    background-color: #3785b0;
     &:before {
       animation: ${progressBar} ${props => props.speedProgress}ms linear
         infinite;
@@ -135,7 +143,7 @@ export const ButtonStyled = styled.button`
     }
   }
   &.${prefixCls}__finished {
-    background-color: #54d98c;
+    background-color: #fd5c63;
     pointer-events: none;
     ${Text}, ${Loading} {
       display: none;

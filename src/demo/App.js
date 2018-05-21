@@ -1,5 +1,14 @@
 import React, { Component } from 'react'
+import { injectGlobal } from 'styled-components';
 import Button from '../lib'
+injectGlobal`
+  @import url('https://fonts.googleapis.com/css?family=Heebo:400,800');
+  button span {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+  }
+`
+
 
 class App extends Component {
     state = {
@@ -25,7 +34,7 @@ class App extends Component {
             <div>
                 <Button
                     state={btnSend}
-                    onClick={this.handleClick}>hello</Button>
+                    onClick={this.handleClick}>Send</Button>
             </div>
         )
     }
