@@ -1,21 +1,255 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonProgressBar component should render a the button progress bar 1`] = `
-<styled.button
-  bgColor="#fd5c63"
-  bgLoading="#3594ca"
-  bgLoadingBehind="#3785b0"
-  className="react-button-loaders__btn"
-  onClick={[Function]}
-  speedIconLoader={800}
-  speedProgress={3000}
->
-  <Text />
-  <Loading>
-    <Component />
-  </Loading>
-  <Success>
-    <Component />
-  </Success>
-</styled.button>
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ButtonProgressBar
+    bgColor="#fd5c63"
+    bgLoading="#3594ca"
+    bgLoadingBehind="#3785b0"
+    checkComponent={<Unknown />}
+    className=""
+    onClick={[Function]}
+    refreshComponent={<Unknown />}
+    speedIconLoader={800}
+    speedProgress={3000}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "bgColor": "#fd5c63",
+      "bgLoading": "#3594ca",
+      "bgLoadingBehind": "#3785b0",
+      "children": Array [
+        <Text />,
+        <Loading>
+          <Unknown />
+          <span />
+</Loading>,
+        <Success>
+          <Unknown />
+          <span />
+</Success>,
+      ],
+      "className": "react-button-loaders__btn",
+      "onClick": [Function],
+      "speedIconLoader": 800,
+      "speedProgress": 3000,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Unknown />,
+            <span />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Unknown />,
+            <span />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "bgColor": "#fd5c63",
+        "bgLoading": "#3594ca",
+        "bgLoadingBehind": "#3785b0",
+        "children": Array [
+          <Text />,
+          <Loading>
+            <Unknown />
+            <span />
+</Loading>,
+          <Success>
+            <Unknown />
+            <span />
+</Success>,
+        ],
+        "className": "react-button-loaders__btn",
+        "onClick": [Function],
+        "speedIconLoader": 800,
+        "speedProgress": 3000,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Unknown />,
+              <span />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Unknown />,
+              <span />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
 `;
