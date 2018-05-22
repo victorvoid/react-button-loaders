@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonProgressBar component should render a the button progress bar 1`] = `
+<styled.button
+  bgColor="#fd5c63"
+  bgLoading="#3594ca"
+  bgLoadingBehind="#3785b0"
+  className="react-button-loaders__btn"
+  onClick={[Function]}
+  speedIconLoader={800}
+  speedProgress={3000}
+>
+  <Text />
+  <Loading>
+    <Component />
+  </Loading>
+  <Success>
+    <Component />
+  </Success>
+</styled.button>
+`;
