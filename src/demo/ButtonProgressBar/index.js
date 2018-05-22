@@ -11,7 +11,7 @@ class ButtonProgressBar extends Component {
       this.setState({
         btnSend: 'finished'
       }, () => console.log('finished'))
-    }, 3000)
+    }, 10000)
   }
 
   handleClick = () =>
@@ -22,11 +22,11 @@ class ButtonProgressBar extends Component {
   render(){
     const { btnSend } = this.state
     return (
-        <div>
+      <div>
         <Button
-      state={btnSend}
-      onClick={this.handleClick}>hello</Button>
-        </div>
+          state={btnSend}
+          onClick={this.handleClick}>Save Changes</Button>
+      </div>
     )
   }
 }

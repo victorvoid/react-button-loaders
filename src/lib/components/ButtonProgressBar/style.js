@@ -99,7 +99,7 @@ export const ButtonStyled = styled.button`
         infinite;
     }
 
-    span {
+    & > span {
       &:nth-of-type(1) {
         top: -100%;
         transform: translateY(-50%);
@@ -108,10 +108,13 @@ export const ButtonStyled = styled.button`
       &:nth-of-type(2) {
         top: 50%;
         transform: translateY(-50%);
-
+        display: flex;
+        align-items: center;
+        font-size: 12px;
         svg {
           animation: ${rotate360} ${props => props.speedIconLoader}ms linear
             infinite;
+          margin-right: 5px;
         }
       }
 
@@ -128,8 +131,13 @@ export const ButtonStyled = styled.button`
     }
 
     ${Success} {
-      display: block !important;
+      display: flex !important;
+      align-items: center;
       animation: ${scaleFinished} 0.5s linear;
+      & > span {
+        margin-left: 5px;
+        font-size: 12px;
+      }
     }
   }
 `

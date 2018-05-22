@@ -18,6 +18,8 @@ const ButtonProgressBar = ({
   state,
   refreshComponent,
   checkComponent,
+  textWhileLoading,
+  textWhenLoaded,
   ...props
 }) => {
   const classNameJoined = classNames(className, `${prefixCls}__btn`, {
@@ -27,8 +29,14 @@ const ButtonProgressBar = ({
   return (
     <ButtonStyled {...props} className={classNameJoined}>
       <Text>{children}</Text>
-      <Loading>{refreshComponent}</Loading>
-      <Success>{checkComponent}</Success>
+      <Loading>
+        {refreshComponent}
+        <span>{textWhileLoading}</span>
+      </Loading>
+      <Success>
+        {checkComponent}
+        <span>{textWhenLoaded}</span>
+      </Success>
     </ButtonStyled>
   )
 }
@@ -48,6 +56,8 @@ ButtonProgressBar.defaultProps = {
 const { string, number, func } = PropTypes
 
 ButtonProgressBar.propTypes = {
+  textWhenLoaded: string,
+  textWhileLoading: string,
   className: string,
   speedProgress: number,
   speedIconLoader: number,
