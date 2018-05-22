@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 import config from '../../config.js'
 const { prefixCls } = config
 import {
@@ -39,7 +40,21 @@ ButtonProgressBar.defaultProps = {
   refreshComponent: <RefreshIcon />,
   checkComponent: <CheckIcon />,
   onClick: () => {},
-  onFinished: () => {}
+  bgColor: '#fd5c63',
+  bgLoading: '#3594ca',
+  bgLoadingBehind: '#3785b0'
+}
+
+const { string, number, func } = PropTypes
+
+ButtonProgressBar.propTypes = {
+  className: string,
+  speedProgress: number,
+  speedIconLoader: number,
+  onClick: func,
+  bgColor: string,
+  bgLoading: string,
+  bgLoadingBehind: string
 }
 
 export default ButtonProgressBar

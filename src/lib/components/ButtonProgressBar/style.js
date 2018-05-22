@@ -1,32 +1,10 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { IconRefresh, IconCheck } from '../Icons'
+import { rotate360, progressBar, scaleFinished } from '../../animations'
+
 import config from '../../config'
 const { prefixCls } = config
-
-const rotate360 = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-`
-
-const progressBar = keyframes`
-  from { transform: translateX(-100%) }
-  to { transform: translateX(0) }
-`
-
-const scaleFinished = keyframes`
-	0%   {
-    transform: scale(10);
-    opacity: 0
-  }
-	50%  { transform: scale(0.2) }
-	70%  { transform: scale(1.2) }
-	90%  { transform: scale(0.7) }
-	100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-`
 
 export const Text = styled.span`
   font-size: 15px;
@@ -75,7 +53,7 @@ export const ButtonStyled = styled.button`
   cursor: pointer;
   width: 200px;
   padding: 24px 50px;
-  background-color: #fd5c63;
+  background-color: ${props => props.bgColor};
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -94,7 +72,7 @@ export const ButtonStyled = styled.button`
     transform: translateX(-100%);
     width: 100%;
     height: 100%;
-    background-color: #3594ca;
+    background-color: ${props => props.bgLoading};
   }
   ${Text}, ${Loading}, ${Success} {
     position: absolute;
@@ -115,7 +93,7 @@ export const ButtonStyled = styled.button`
   &.${prefixCls}__loading {
     cursor: progress;
     pointer-events: none;
-    background-color: #3785b0;
+    background-color: ${props => props.bgLoadingBehind};
     &:before {
       animation: ${progressBar} ${props => props.speedProgress}ms linear
         infinite;
@@ -143,7 +121,7 @@ export const ButtonStyled = styled.button`
     }
   }
   &.${prefixCls}__finished {
-    background-color: #fd5c63;
+    background-color: ${props => props.bgColor};
     pointer-events: none;
     ${Text}, ${Loading} {
       display: none;
