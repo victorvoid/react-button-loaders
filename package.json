@@ -4,9 +4,8 @@
   "description": "",
   "main": "build/index.js",
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "yarn storybook",
     "build": "node scripts/build.js",
-    "demo": "node scripts/demo.js",
     "test": "node scripts/test.js --env=jsdom",
     "prettier": "prettier-standard 'src/lib/**/*.js'",
     "storybook": "start-storybook -p 6006",
@@ -28,6 +27,7 @@
     "styled-components": "^3.2.6"
   },
   "devDependencies": {
+    "@dump247/storybook-state": "^1.5.0",
     "@storybook/addon-actions": "^3.4.5",
     "@storybook/addon-links": "^3.4.5",
     "@storybook/addons": "^3.4.5",
