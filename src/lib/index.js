@@ -1,3 +1,6 @@
-import ButtonProgressBar from './components/ButtonProgressBar'
+import Rabbit from './components/Rabbit'
+import Beetle from './components/Beetle'
 
-export default ButtonProgressBar
+export default Rabbit
+
+export { Beetle, Rabbit }

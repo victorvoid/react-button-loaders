@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withState } from '@dump247/storybook-state';
-import ButtonProgressBar from '../lib/components/ButtonProgressBar'
+import { Rabbit } from '../lib'
 
 const handleClick = (store) => {
     store.set({ btnState: 'loading' })
@@ -11,42 +11,42 @@ const handleClick = (store) => {
     }, 3000)
 }
 
-storiesOf('Buttons/ProgressBar', module)
+storiesOf('Buttons/Rabbit', module)
     .add('default', withState({ btnState: '' })(({ store }) => (
-        <ButtonProgressBar
+        <Rabbit
             state={store.state.btnState}
             onClick={() => handleClick(store)}>
             Save Changes
-        </ButtonProgressBar>
+        </Rabbit>
     )))
     .add('default with text', withState({ btnState: '' })(({ store }) => (
-        <ButtonProgressBar
+        <Rabbit
             textWhileLoading='Saving'
             textWhenLoaded ='Saved'
             state={store.state.btnState}
             onClick={() => handleClick(store)}>
             Save Changes
-        </ButtonProgressBar>
+        </Rabbit>
     )))
     .add('loading', () =>
-         <ButtonProgressBar state='loading'>
+         <Rabbit state='loading'>
              Save Changes
-         </ButtonProgressBar>
+         </Rabbit>
 
     )
     .add('loading with text', () =>
-         <ButtonProgressBar state='loading' textWhileLoading='Saving'>
+         <Rabbit state='loading' textWhileLoading='Saving'>
              Save Changes
-         </ButtonProgressBar>
+         </Rabbit>
 
     )
     .add('completed', () =>
-         <ButtonProgressBar state='finished'>
+         <Rabbit state='finished'>
              Save Changes
-         </ButtonProgressBar>
+         </Rabbit>
     )
     .add('completed with text', () =>
-         <ButtonProgressBar state='finished' textWhenLoaded='Saved'>
+         <Rabbit state='finished' textWhenLoaded='Saved'>
              Save Changes
-         </ButtonProgressBar>
+         </Rabbit>
     )

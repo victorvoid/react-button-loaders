@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withState } from '@dump247/storybook-state';
-import ButtonSpinner from '../lib/components/ButtonSpinner'
+import { Beetle } from '../lib'
 
 const handleClick = (store) => {
     store.set({ btnState: 'loading' })
@@ -11,26 +11,26 @@ const handleClick = (store) => {
     }, 3000)
 }
 
-storiesOf('Buttons/Spinner', module)
+storiesOf('Buttons/Beetle', module)
     .add('default', withState({ btnState: '' })(({ store }) => (
-        <ButtonSpinner
+        <Beetle
             state={store.state.btnState}
             onClick={() => handleClick(store)}>
             Save Changes
-        </ButtonSpinner>
+        </Beetle>
     )))
     .add('loading', () =>
-         <ButtonSpinner state='loading'>
+         <Beetle state='loading'>
              Save Changes
-         </ButtonSpinner>
+         </Beetle>
     )
     .add('completed', () =>
-         <ButtonSpinner state='finished'>
+         <Beetle state='finished'>
              Save Changes
-         </ButtonSpinner>
+         </Beetle>
     )
     .add('completed with text', () =>
-         <ButtonSpinner state='finished' textWhenLoaded='Saved'>
+         <Beetle state='finished' textWhenLoaded='Saved'>
              Save Changes
-         </ButtonSpinner>
+         </Beetle>
     )

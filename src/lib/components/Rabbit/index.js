@@ -3,13 +3,22 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import config from '../../config.js'
 const { prefixCls } = config
-import { ButtonStyled, Text, Loading, Success, CheckIcon } from './style'
+import {
+  ButtonStyled,
+  Text,
+  Loading,
+  Success,
+  RefreshIcon,
+  CheckIcon
+} from './style'
 
-const ButtonSpinner = ({
+const Rabbit = ({
   children,
   className,
   state,
+  refreshComponent,
   checkComponent,
+  textWhileLoading,
   textWhenLoaded,
   ...props
 }) => {
@@ -20,7 +29,10 @@ const ButtonSpinner = ({
   return (
     <ButtonStyled {...props} className={classNameJoined}>
       <Text>{children}</Text>
-      <Loading />
+      <Loading>
+        {refreshComponent}
+        <span>{textWhileLoading}</span>
+      </Loading>
       <Success>
         {checkComponent}
         <span>{textWhenLoaded}</span>
@@ -29,10 +41,11 @@ const ButtonSpinner = ({
   )
 }
 
-ButtonSpinner.defaultProps = {
+Rabbit.defaultProps = {
   className: '',
   speedProgress: 3000,
   speedIconLoader: 800,
+  refreshComponent: <RefreshIcon />,
   checkComponent: <CheckIcon />,
   onClick: () => {},
   bgColor: '#fd5c63',
@@ -42,8 +55,9 @@ ButtonSpinner.defaultProps = {
 
 const { string, number, func } = PropTypes
 
-ButtonSpinner.propTypes = {
+Rabbit.propTypes = {
   textWhenLoaded: string,
+  textWhileLoading: string,
   className: string,
   speedProgress: number,
   speedIconLoader: number,
@@ -53,4 +67,4 @@ ButtonSpinner.propTypes = {
   bgLoadingBehind: string
 }
 
-export default ButtonSpinner
+export default Rabbit

@@ -3,22 +3,13 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import config from '../../config.js'
 const { prefixCls } = config
-import {
-  ButtonStyled,
-  Text,
-  Loading,
-  Success,
-  RefreshIcon,
-  CheckIcon
-} from './style'
+import { ButtonStyled, Text, Loading, Success, CheckIcon } from './style'
 
-const ButtonProgressBar = ({
+const Beetle = ({
   children,
   className,
   state,
-  refreshComponent,
   checkComponent,
-  textWhileLoading,
   textWhenLoaded,
   ...props
 }) => {
@@ -29,10 +20,7 @@ const ButtonProgressBar = ({
   return (
     <ButtonStyled {...props} className={classNameJoined}>
       <Text>{children}</Text>
-      <Loading>
-        {refreshComponent}
-        <span>{textWhileLoading}</span>
-      </Loading>
+      <Loading />
       <Success>
         {checkComponent}
         <span>{textWhenLoaded}</span>
@@ -41,11 +29,10 @@ const ButtonProgressBar = ({
   )
 }
 
-ButtonProgressBar.defaultProps = {
+Beetle.defaultProps = {
   className: '',
   speedProgress: 3000,
   speedIconLoader: 800,
-  refreshComponent: <RefreshIcon />,
   checkComponent: <CheckIcon />,
   onClick: () => {},
   bgColor: '#fd5c63',
@@ -55,9 +42,8 @@ ButtonProgressBar.defaultProps = {
 
 const { string, number, func } = PropTypes
 
-ButtonProgressBar.propTypes = {
+Beetle.propTypes = {
   textWhenLoaded: string,
-  textWhileLoading: string,
   className: string,
   speedProgress: number,
   speedIconLoader: number,
@@ -67,4 +53,4 @@ ButtonProgressBar.propTypes = {
   bgLoadingBehind: string
 }
 
-export default ButtonProgressBar
+export default Beetle

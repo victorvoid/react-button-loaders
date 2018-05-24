@@ -1,16 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ButtonSpinner component should render a the spinner button 1`] = `
+exports[`Rabbit component should render a the button progress bar 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ButtonSpinner
+  Symbol(enzyme.__unrendered__): <Rabbit
     bgColor="#fd5c63"
     bgLoading="#3594ca"
     bgLoadingBehind="#3785b0"
     checkComponent={<Unknown />}
     className=""
     onClick={[Function]}
+    refreshComponent={<Unknown />}
     speedIconLoader={800}
     speedProgress={3000}
 />,
@@ -31,7 +32,10 @@ ShallowWrapper {
       "bgLoadingBehind": "#3785b0",
       "children": Array [
         <Text />,
-        <Loading />,
+        <Loading>
+          <Unknown />
+          <span />
+</Loading>,
         <Success>
           <Unknown />
           <span />
@@ -59,9 +63,35 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "children": Array [
+            <Unknown />,
+            <span />,
+          ],
+        },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+        ],
         "type": [Function],
       },
       Object {
@@ -113,7 +143,10 @@ ShallowWrapper {
         "bgLoadingBehind": "#3785b0",
         "children": Array [
           <Text />,
-          <Loading />,
+          <Loading>
+            <Unknown />
+            <span />
+</Loading>,
           <Success>
             <Unknown />
             <span />
@@ -141,9 +174,35 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "children": Array [
+              <Unknown />,
+              <span />,
+            ],
+          },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+          ],
           "type": [Function],
         },
         Object {
