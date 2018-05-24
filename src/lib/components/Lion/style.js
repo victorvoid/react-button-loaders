@@ -149,7 +149,7 @@ export const ButtonStyled = styled.button`
             width:2px;
             height:0;
             position: absolute;
-            transition: all 0.2s linear;
+            transition: all 0.1s linear;
             background: ${props => props.bgWhenFinish}
         }
         &:before {
@@ -170,23 +170,23 @@ export const ButtonStyled = styled.button`
         }
     }
     &:before {
-        animation: ${toWidth100} .2s linear;
+        animation: ${toWidth100} .1s linear;
         animation-fill-mode: forwards;
         animation-delay: .4s;
     }
     &:after {
-        animation: ${toWidth100} .2s linear;
+        animation: ${toWidth100} .1s linear;
         animation-fill-mode: forwards;
         animation-delay: 0s;
     }
     ${Effect} {
         &:before {
-            animation: ${toHeight100} .2s linear;
+            animation: ${toHeight100} .1s linear;
             animation-fill-mode: forwards;
             animation-delay: .6s;
         }
         &:after {
-            animation: ${toHeight100} .2s linear;
+            animation: ${toHeight100} .1s linear;
             animation-fill-mode: forwards;
             animation-delay: .2s;
         }
