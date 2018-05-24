@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withState } from '@dump247/storybook-state'
-import { Rabbit } from '../lib'
+import { Lion } from '../lib'
 
 const handleClick = store => {
   store.set({ btnState: 'loading' })
@@ -11,37 +11,37 @@ const handleClick = store => {
   }, 3000)
 }
 
-storiesOf('Buttons/Rabbit', module)
+storiesOf('Buttons/Lion', module)
   .add(
     'default',
     withState({ btnState: '' })(({ store }) => (
-      <Rabbit state={store.state.btnState} onClick={() => handleClick(store)}>
+      <Lion state={store.state.btnState} onClick={() => handleClick(store)}>
         Save Changes
-      </Rabbit>
+      </Lion>
     ))
   )
   .add(
     'default with text',
     withState({ btnState: '' })(({ store }) => (
-      <Rabbit
+      <Lion
+        state={store.state.btnState}
         textWhileLoading='Saving'
         textWhenLoaded='Saved'
-        state={store.state.btnState}
         onClick={() => handleClick(store)}
       >
         Save Changes
-      </Rabbit>
+      </Lion>
     ))
   )
-  .add('loading', () => <Rabbit state='loading'>Save Changes</Rabbit>)
+  .add('loading', () => <Lion state='loading'>Save Changes</Lion>)
   .add('loading with text', () => (
-    <Rabbit state='loading' textWhileLoading='Saving'>
+    <Lion state='loading' textWhileLoading='Saving'>
       Save Changes
-    </Rabbit>
+    </Lion>
   ))
-  .add('completed', () => <Rabbit state='finished'>Save Changes</Rabbit>)
+  .add('completed', () => <Lion state='finished'>Save Changes</Lion>)
   .add('completed with text', () => (
-    <Rabbit state='finished' textWhenLoaded='Saved'>
+    <Lion state='finished' textWhenLoaded='Saved'>
       Save Changes
-    </Rabbit>
+    </Lion>
   ))

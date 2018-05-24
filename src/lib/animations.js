@@ -15,11 +15,27 @@ export const scaleFinished = keyframes`
     transform: scale(10);
     opacity: 0
   }
-	50%  { transform: scale(0.2) }
-	70%  { transform: scale(1.2) }
-	90%  { transform: scale(0.7) }
+	50%  {
+    transform: scale(0.2)
+  }
+	70%  {
+    transform: scale(1.2)
+  }
+	90%  {
+    transform: scale(0.7)
+  }
 	100% {
     transform: scale(1);
     opacity: 1;
   }
+`
+
+export const toWidth100 = keyframes`
+  from { width: 0; }
+  to { width: 100%; }
+`
+
+export const toHeight100 = keyframes`
+  from { height: 0; }
+  to { height: 100%; }
 `

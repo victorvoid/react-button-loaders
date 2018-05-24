@@ -7,7 +7,7 @@
     "start": "yarn storybook",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "prettier": "prettier-standard 'src/lib/**/*.js'",
+    "prettier": "prettier-standard 'src/**/*.js'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages"
