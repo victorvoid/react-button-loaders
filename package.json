@@ -1,7 +1,7 @@
 {
   "name": "react-button-loaders",
-  "version": "1.1.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A collection of loading buttons easily customizable.",
   "main": "build/index.js",
   "scripts": {
     "start": "yarn storybook",
