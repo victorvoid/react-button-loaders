@@ -39,7 +39,7 @@ import { Lion as Button } from 'react-button-loaders'
 
 class App extends Component {
   state = {
-    btnState: ''
+    sendState: ''
   }
   
   handleClick = () => {
