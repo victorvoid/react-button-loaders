@@ -46,7 +46,7 @@ class App extends Component {
     this.setState({sendState: 'loading'})
     //simulating an API
     setTimeout(() => {
-      this.setState({sendState: ''})
+      this.setState({sendState: 'finished'})
     }, 3000)
   }
   
@@ -70,6 +70,7 @@ The following APIs are shared by all Buttons.
 | Name         | Type    | Default | Description |
 | ------------ | ------- | ------- | ----------- |
 | className | string | `''` | Additional CSS class for the button |
+| state | string | `loading, finished` | The button state to render |
 | speedProgress | number | `3000` | The loading speed |
 | speedIconLoader | number | `800` | The speed of icon loading |
 | refreshComponent | `Component` | [Component](https://github.com/victorvoid/react-button-loaders/blob/master/src/lib/components/Icons.js#L3) | Change the component that is displayed while loading|
