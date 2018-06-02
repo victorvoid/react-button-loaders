@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Rabbit
-    bgColor="#fd5c63"
+    bgColor="#F06189"
     bgLoading="#3594ca"
     bgLoadingBehind="#3785b0"
     checkComponent={<Unknown />}
@@ -27,7 +27,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "bgColor": "#fd5c63",
+      "bgColor": "#F06189",
       "bgLoading": "#3594ca",
       "bgLoadingBehind": "#3785b0",
       "children": Array [
@@ -138,7 +138,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "bgColor": "#fd5c63",
+        "bgColor": "#F06189",
         "bgLoading": "#3594ca",
         "bgLoadingBehind": "#3785b0",
         "children": Array [
