@@ -23,4 +23,5 @@ config
 demo
 .travis.yml
 CHANGELOG.md
-README.md
+.storybook
+.prettierrc
