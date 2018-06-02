@@ -35,7 +35,7 @@ Beetle.defaultProps = {
   speedIconLoader: 800,
   checkComponent: <CheckIcon />,
   onClick: () => {},
-  bgColor: '#fd5c63',
+  bgColor: '#F06189',
   bgLoading: '#3594ca',
   bgLoadingBehind: '#3785b0'
 }
