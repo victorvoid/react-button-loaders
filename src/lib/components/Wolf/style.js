@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components'
 
-
 const shadowpulse = keyframes`
   0% { box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1); }
   100% { box-shadow: 0 0 0 20px rgba(0, 0, 0, 0); }
