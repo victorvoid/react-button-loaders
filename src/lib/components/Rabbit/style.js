@@ -124,8 +124,7 @@ export const ButtonStyled = styled.button`
     }
   }
   &.${prefixCls}__finished {
-    background-color: ${props => props.bgColor};
-    pointer-events: none;
+    background-color: ${props => props.bgColor}; 
     ${Text}, ${Loading} {
       display: none;
     }
